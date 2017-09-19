@@ -5,14 +5,16 @@
 https://docs.bmob.cn/data/Android/a_faststart/doc/index.html
 
 AS集成
-SDK导入
-AndroidStudio配置
-鉴于目前Google官方推荐使用 Android Studio 进行Android项目开发，自 V3.4.2 开始，Bmob Android SDK 可以使用Gradle来进行包依赖管理，如果你使用Android Studio来进行基于BmobSDK的项目开发，有两种方式：
 
-自动导入(推荐)
-请按照如下两个步骤进行：
-
-在 Project 的 build.gradle 文件中添加 Bmob的maven仓库地址，示例如下：（注意文字说明部分）：
+    SDK导入
+    AndroidStudio配置
+    鉴于目前Google官方推荐使用 Android Studio 进行Android项目开发，自 V3.4.2 开始，
+    Bmob Android SDK 可以使用Gradle来进行包依赖管理，如果你使用Android Studio来进行基于BmobSDK的项目开发，有两种方式：
+    自动导入(推荐)
+    
+  
+ 请按照如下两个步骤进行：
+    在 Project 的 build.gradle 文件中添加 Bmob的maven仓库地址，示例如下：（注意文字说明部分）：
 
  buildscript {
      repositories {
