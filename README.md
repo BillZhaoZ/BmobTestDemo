@@ -1,6 +1,8 @@
 # BmobTestDemo
 云数据库---Bmob使用
 
+ Bmob后端云介绍：https://www.bmob.cn/
+
 注册账号、创建应用
 https://docs.bmob.cn/data/Android/a_faststart/doc/index.html
 
