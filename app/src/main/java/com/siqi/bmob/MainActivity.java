@@ -1,7 +1,6 @@
 package com.siqi.bmob;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,7 +22,7 @@ import cn.bmob.v3.listener.UpdateListener;
  * <p>
  * 插入  修改  删除数据  可在bmob后台查看
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @BindView(value = R.id.tv_show)
     TextView showView;
@@ -74,7 +73,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private void deleteData() {
         final Person p2 = new Person();
-        p2.setObjectId("43fa5ac989");
+        p2.setObjectId("43fa5ac989"); // 设备ID
+
         p2.delete(new UpdateListener() {
 
             @Override

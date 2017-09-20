@@ -12,7 +12,7 @@ import com.siqi.bmob.R;
 import cn.bmob.push.PushConstants;
 
 /**
- * 推送接收器
+ * 推送接收器  数据处理
  * Created by Bill on 17/8/24 14:20
  */
 public class PushMessageReceiver extends BroadcastReceiver {
@@ -24,6 +24,7 @@ public class PushMessageReceiver extends BroadcastReceiver {
 
         if (intent.getAction().equals(PushConstants.ACTION_MESSAGE)) {
 
+            // 吐司和Log
             Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
             Logger.i("客户端收到推送消息：" + msg);
 
