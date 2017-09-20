@@ -9,7 +9,6 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.QueryListener;
@@ -36,9 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
         // 初始化  必须在setContentView之后
         ButterKnife.bind(this);
-
-        // 初始化   APPID：d0ba8c76bb972922db55031b5fbbd18f
-        Bmob.initialize(this, "d0ba8c76bb972922db55031b5fbbd18f");
     }
 
     /**
