@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="zhao.siqi.bmobtest"
+          package="com.siqi.bmob"
           android:versionCode="1"
           android:versionName="1.0">
 
@@ -32,7 +32,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.siqi.bmob.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -70,7 +70,7 @@
         </receiver>
 
         <!-- 第3步中创建的消息接收器，在这里进行注册 -->
-        <receiver android:name=".receiver.PushMessageReceiver">
+        <receiver android:name="com.siqi.bmob.receiver.PushMessageReceiver">
             <intent-filter>
                 <action android:name="cn.bmob.push.action.MESSAGE"/>
             </intent-filter>

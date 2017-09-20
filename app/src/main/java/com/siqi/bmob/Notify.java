@@ -1,4 +1,4 @@
-package zhao.siqi.bmobtest;
+package com.siqi.bmob;
 
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -15,6 +15,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.CloudCodeListener;
 
 /**
+ * 通知工具类
  * Created on 17/6/21 15:34
  */
 public class Notify {
@@ -113,9 +114,9 @@ public class Notify {
 
             }
         });
+
         return this;
     }
-
 
     public Uri getSound() {
         return mSound;
@@ -131,9 +132,15 @@ public class Notify {
             mManager.notify(getId(), notification());
     }
 
-
+    /**
+     * 通知
+     *
+     * @return
+     */
     public Notification notification() {
+
         NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext);
+
         if (getTitle() != null)
             builder.setContentTitle(getTitle());
         if (getText() != null)
@@ -151,9 +158,7 @@ public class Notify {
         if (getSound() != null)
             builder.setSound(getSound());
 
-
         return builder.build();
     }
-
 
 }

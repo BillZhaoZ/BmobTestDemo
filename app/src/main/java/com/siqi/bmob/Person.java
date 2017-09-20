@@ -1,4 +1,4 @@
-package zhao.siqi.bmobtest;
+package com.siqi.bmob;
 
 import cn.bmob.v3.BmobObject;
 

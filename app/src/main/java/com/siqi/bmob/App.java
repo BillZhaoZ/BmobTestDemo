@@ -1,4 +1,4 @@
-package zhao.siqi.bmobtest;
+package com.siqi.bmob;
 
 import android.app.Application;
 
@@ -13,9 +13,8 @@ import cn.bmob.v3.InstallationListener;
 import cn.bmob.v3.exception.BmobException;
 
 /**
- * Created on 17/8/24 13:18
+ * Created on Bill 17/9/20
  */
-
 public class App extends Application {
 
     @Override
