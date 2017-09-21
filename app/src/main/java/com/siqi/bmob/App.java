@@ -26,7 +26,6 @@ public class App extends Application {
          */
         Logger.addLogAdapter(new AndroidLogAdapter());
 
-        //TODO 集成：1.4、初始化数据服务SDK、保存设备信息并启动推送服务
         /**
          * 初始化比目数据SDK
          */

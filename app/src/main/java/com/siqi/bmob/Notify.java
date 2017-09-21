@@ -143,20 +143,29 @@ public class Notify {
 
         if (getTitle() != null)
             builder.setContentTitle(getTitle());
+
         if (getText() != null)
             builder.setContentText(getText());
+
         if (getSmallIcon() != null)
             builder.setSmallIcon(getSmallIcon());
+
         if (getLargeIcon() != null)
             builder.setLargeIcon(getLargeIcon());
+
         if (getSubText() != null)
             builder.setSubText(getSubText());
+
         if (getPendingIntent() != null)
             builder.setContentIntent(getPendingIntent());
+
         if (getAutoCancel() != null && getAutoCancel())
             builder.setAutoCancel(getAutoCancel());
+
         if (getSound() != null)
             builder.setSound(getSound());
+
+        // builder.setFullScreenIntent(getPendingIntent(),true);  // 设置悬挂式
 
         return builder.build();
     }
