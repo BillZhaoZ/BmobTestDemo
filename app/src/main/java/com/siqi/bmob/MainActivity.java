@@ -1,6 +1,8 @@
 package com.siqi.bmob;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +29,7 @@ public class MainActivity extends BaseActivity {
     @BindView(value = R.id.tv_show)
     TextView showView;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +37,8 @@ public class MainActivity extends BaseActivity {
 
         // 初始化  必须在setContentView之后
         ButterKnife.bind(this);
+
+        // showView.setTranslationZ(100);
     }
 
     /**
@@ -80,11 +85,11 @@ public class MainActivity extends BaseActivity {
             @Override
             public void done(BmobException e) {
                 if (e == null) {
-                    Toast.makeText(getBaseContext(), "删除成功:" + p2.getUpdatedAt(), Toast.LENGTH_SHORT);
+                    Toast.makeText(getBaseContext(), "删除成功:" + p2.getUpdatedAt(), Toast.LENGTH_SHORT).show();
 
                     showView.setText("没数据啦！");
                 } else {
-                    Toast.makeText(getBaseContext(), "删除失败：" + e.getMessage(), Toast.LENGTH_SHORT);
+                    Toast.makeText(getBaseContext(), "删除失败：" + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -104,11 +109,11 @@ public class MainActivity extends BaseActivity {
             @Override
             public void done(BmobException e) {
                 if (e == null) {
-                    Toast.makeText(getBaseContext(), "更新成功" + p2.getUpdatedAt(), Toast.LENGTH_SHORT);
+                    Toast.makeText(getBaseContext(), "更新成功" + p2.getUpdatedAt(), Toast.LENGTH_SHORT).show();
 
                     showView.setText("address:北京朝阳");
                 } else {
-                    Toast.makeText(getBaseContext(), "更新失败：" + e.getMessage(), Toast.LENGTH_SHORT);
+                    Toast.makeText(getBaseContext(), "更新失败：" + e.getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -126,11 +131,11 @@ public class MainActivity extends BaseActivity {
             @Override
             public void done(Person object, BmobException e) {
                 if (e == null) {
-                    Toast.makeText(getBaseContext(), "查询成功", Toast.LENGTH_SHORT);
+                    Toast.makeText(getBaseContext(), "查询成功", Toast.LENGTH_SHORT).show();
 
                     showView.setText("查询的id为：" + "43fa5ac989");
                 } else {
-                    Toast.makeText(getBaseContext(), "查询失败", Toast.LENGTH_SHORT);
+                    Toast.makeText(getBaseContext(), "查询失败", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -149,11 +154,11 @@ public class MainActivity extends BaseActivity {
             public void done(String objectId, BmobException e) {
 
                 if (e == null) {
-                    Toast.makeText(getBaseContext(), "添加数据成功，返回objectId为：" + objectId, Toast.LENGTH_SHORT);
+                    Toast.makeText(getBaseContext(), "添加数据成功，返回objectId为：" + objectId, Toast.LENGTH_SHORT).show();
 
                     showView.setText("name: lucky" + "&& address:北京海淀");
                 } else {
-                    Toast.makeText(getBaseContext(), "创建数据失败", Toast.LENGTH_SHORT);
+                    Toast.makeText(getBaseContext(), "创建数据失败", Toast.LENGTH_SHORT).show();
                 }
             }
         });
